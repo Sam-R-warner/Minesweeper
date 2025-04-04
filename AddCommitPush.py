@@ -1,40 +1,44 @@
 import subprocess
+import argparse
 
-print("Add Commit Push")
-print("Executing \"git status\":")
-print("")
+def run_command(cmd):
+    print(f"\n$ {cmd}")
+    result = subprocess.run(cmd, shell=True, text=True, capture_output=True)
+    print(result.stdout)
+    if result.stderr:
+        print(result.stderr)
+    return result.returncode
 
-# Run the git status command
-resultGitStatus = subprocess.run(["git", "status"], capture_output=True, text=True)
-print(resultGitStatus.stdout) 
+def main():
+    parser = argparse.ArgumentParser(description="Stage all changes, commit, and push to git.")
+    parser.add_argument("-m", "--message", type=str, default="Auto-commit", help="Commit message")
+    parser.add_argument("-f", "--force", action="store_true", help="Skip confirmation prompt")
 
-# Executing "git add -A"
-print("Executing \"git add -A\":")
-print("")
+    args = parser.parse_args()
+    commit_message = args.message
+    force = args.force
 
-# Run the git status command
-resultGitAdd = subprocess.run(["git", "add", "-A",], capture_output=True, text=True)
-print(resultGitAdd.stdout)
-print("STDERR:")
-print(resultGitAdd.stderr)
+    print("git status:")
+    run_command("git status")
 
-# Executing "git commit"
-print("Executing \"git commit -m\":")
-print("")
+    cmds = [
+        "git add .",
+        f"git commit -m \"{commit_message}\"",
+        "git push"
+    ]
 
-# Run the git commit command
-commit_message = input("Enter commit message: ")
-resultGitCommit = subprocess.run(["git", "commit", "-m", commit_message,], capture_output=True, text=True)
-print(resultGitCommit.stdout)
-print("STDERR:")
-print(resultGitCommit.stderr)
+    print("\nThe following commands will be run:")
+    for cmd in cmds:
+        print(f"  {cmd}")
 
-# Executing "git push"
-print("Executing \"git push\":")
-print("")
+    if not force:
+        confirm = input("\nDo you want to proceed? (y/n): ").lower()
+        if confirm != 'y':
+            print("Aborted by user.")
+            return
 
-# Run the git status command
-resultGitPush = subprocess.run(["git", "push",], capture_output=True, text=True)
-print(resultGitPush.stdout)
-print("STDERR:")
-print(resultGitPush.stderr)
+    for cmd in cmds:
+        run_command(cmd)
+
+if __name__ == "__main__":
+    main()
