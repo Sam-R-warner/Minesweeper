@@ -23,7 +23,8 @@ print("Executing \"git commit -m\":")
 print("")
 
 # Run the git commit command
-resultGitCommit = subprocess.run(["git", "commit", "-m", "\"Update files.\"",], capture_output=True, text=True)
+commit_message = input("Enter commit message: ")
+resultGitCommit = subprocess.run(["git", "commit", "-m", commit_message,], capture_output=True, text=True)
 print(resultGitCommit.stdout)
 print("STDERR:")
 print(resultGitCommit.stderr)
