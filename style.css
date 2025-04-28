@@ -1,0 +1,47 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: auto;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+.main-info {
+    background: #616E7C;
+    color: #fff;
+    padding: 20px;
+}
+.main-info h1 {
+    margin: 0;
+}
+.center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+}
+
+
+
+
+/* Dark Mode Section */
+.dark-mode {
+    background-color: #000000;
+    color: #616E7C;
+}
+.dark-mode .container {
+    background-color: #000000;
+    color: #616E7C;
+}
+.dark-mode .main-info {
+    background: #616E7C;
+    color: #fff;
+}
+.dark-mode h1 {
+    color: white;
+}
+.dark-mode p {
+    color: white;
+}

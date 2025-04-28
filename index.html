@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<body>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <title>Minesweeper</title>
-</body>
-
-
-
-
-    <script src="script.js"></script>
+</head>
 <body>
+    <div class="container">
+        <header class="main-info">
+            <h1>Minesweeper</h1>
+            <h2>Can you clear the minefield?</h2>
+            <h2>Click on a square to reveal it. If you click on a mine, you lose!</h2>
+            <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        </header>
+<br><br>
+        <header class="main-info">
+        <div class="game-info">
+            <p>Click the "Reset" button to start a new game.</p>
+        <div class="game-board" id="game-board"></div>
+        <div class="controls">
+            <button id="reset-button">Reset</button>
+            <p id="status"></p>
+            <p id="mines-left"></p>
+        </div>
+    </header>
+    </div>
+<script src="script.js"></script>
+</body>
 </html>
