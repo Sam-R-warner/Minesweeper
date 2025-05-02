@@ -1,7 +1,8 @@
+/* General Coloring */
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: auto;
-    background-color: #ffffff;
+    background-color: #4A4D60;
     line-height: 1.6;
 }
 .container {
@@ -10,7 +11,7 @@ body {
 }
 .main-info {
     background: #616E7C;
-    color: #fff;
+    color: #ffffff;
     padding: 20px;
 }
 .main-info h1 {
@@ -23,25 +24,67 @@ body {
         width: 50%;
 }
 
-
-
+/* Game Section */
+#reset {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  #board {
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(10, 30px);
+    gap: 2px;
+    justify-content: center;
+    margin: 0 auto;
+    width: fit-content;
+  }
+  
+  .cell {
+    width: 30px;
+    height: 30px;
+    background-color: #5A666B;
+    border: 1px solid #142634;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    user-select: none;
+  }
+  
+  .cell.revealed {
+    background-color: #7E8889;
+    cursor: default;
+  }
+  
+  .cell.mine {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .cell.flagged {
+    background-color: #ffc107;
+  }
 
 /* Dark Mode Section */
 .dark-mode {
-    background-color: #000000;
-    color: #616E7C;
+    background-color: #222222;
+    color: #13213C;
 }
 .dark-mode .container {
-    background-color: #000000;
-    color: #616E7C;
+    color: #3B3758;
 }
 .dark-mode .main-info {
-    background: #616E7C;
-    color: #fff;
+    background: #3B3758;
+    color: #E6EAF3;
 }
 .dark-mode h1 {
-    color: white;
+    color: #E6EAF3;
 }
 .dark-mode p {
-    color: white;
+    color: #E6EAF3;
 }

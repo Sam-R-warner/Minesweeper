@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Minesweeper</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <header class="main-info">
@@ -15,17 +16,12 @@
             <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
         </header>
 <br><br>
-        <header class="main-info">
-        <div class="game-info">
-            <p>Click the "Reset" button to start a new game.</p>
-        <div class="game-board" id="game-board"></div>
-        <div class="controls">
-            <button id="reset-button">Reset</button>
-            <p id="status"></p>
-            <p id="mines-left"></p>
-        </div>
+    <header class="main-info">
+        <h1>Minesweeper</h1>
+        <button id="reset">Reset Game</button>
+        <div id="board"></div>
+        <script src="script.js"></script>
     </header>
-    </div>
-<script src="script.js"></script>
+
 </body>
 </html>
