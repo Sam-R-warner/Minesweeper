@@ -18,10 +18,10 @@ body {
     margin: 0;
 }
 .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 /* Game Section */
@@ -30,9 +30,8 @@ body {
     font-size: 16px;
     margin-bottom: 20px;
     cursor: pointer;
-  }
-  
-  #board {
+}
+#board {
     display: grid;
     grid-template-columns: repeat(10, 30px);
     grid-template-rows: repeat(10, 30px);
@@ -40,9 +39,8 @@ body {
     justify-content: center;
     margin: 0 auto;
     width: fit-content;
-  }
-  
-  .cell {
+}
+.cell {
     width: 30px;
     height: 30px;
     background-color: #5A666B;
@@ -54,21 +52,19 @@ body {
     font-weight: bold;
     font-size: 16px;
     user-select: none;
-  }
-  
-  .cell.revealed {
+}
+.cell.revealed {
     background-color: #7E8889;
     cursor: default;
-  }
-  
-  .cell.mine {
+}
+.cell.mine {
     background-color: #f44336;
     color: white;
-  }
-  
-  .cell.flagged {
+}
+.cell.flagged {
     background-color: #ffc107;
-  }
+    color: red;
+}
 
 /* Dark Mode Section */
 .dark-mode {
