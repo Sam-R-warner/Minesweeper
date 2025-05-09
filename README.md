@@ -10,7 +10,7 @@ Credits: Eric Pogue, Chat-GPT, Grant Gallagher
 ### Application Overview (overview from a end user perspective)
     Square board with several more squares inside of it to resemble a chess board.
 ### Technology Overview (languages, libraries, platforms, hosting)
-    HTML, Python, CSS
+    HTML, Python, CSS, and Javascript
 ### Proposal Last Updated (the date the proposal was last updated)
     5/1/2025
 ### Feature List (prioritized list of features that can likely be delivered in the time allowed)
