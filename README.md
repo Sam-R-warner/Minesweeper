@@ -1,6 +1,7 @@
 # Minesweeper
 
 Author: Samuel Warner
+samuelrwarner@lewisu.edu
 Credits: Eric Pogue, Chat-GPT, Grant Gallagher
 
 
