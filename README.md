@@ -1,7 +1,7 @@
 # Minesweeper
 
 Author: Samuel Warner
-Credits: Eric Pogue, Chat-GPT
+Credits: Eric Pogue, Chat-GPT, Grant Gallagher
 
 
 # Implementations
